@@ -1,6 +1,11 @@
-<nav class="menu">
-  <div class="menu-title">Chapters</div>
-  <ul class="menu-list">
+<nav class="menu" id="site-menu">
+  <div class="menu-header">
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-list">
+      ☰ Chapters
+    </button>
+    <div class="menu-title">Chapters</div>
+  </div>
+  <ul id="menu-list" class="menu-list">
     {% assign chapters = site.posts | sort: 'date' %}
     {% for post in chapters %}
       <li>
