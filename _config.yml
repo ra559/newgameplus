@@ -1,7 +1,7 @@
 title: "Book Series"
 description: "A Jekyll theme for chapter-based book websites"
-baseurl: ""
-url: ""
+url: "https://ra559.github.io"
+baseurl: "/newgameplus"
 markdown: kramdown
 highlighter: rouge
 kramdown:

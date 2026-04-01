@@ -1,3 +1,5 @@
+require_relative "lib/jekyll-theme-bobby/version"
+
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-bobby"
   spec.version       = JekyllThemeBobby::VERSION
@@ -15,5 +17,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "jekyll", "~> 4.3"
-  spec.add_development_dependency "bundler", "~> 2.0"
+  spec.add_development_dependency "bundler", ">= 2.0"
 end
