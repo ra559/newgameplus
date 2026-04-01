@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 1 | Book Series</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&family=Lora:ital@0;1&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/code.css">
+  <link rel="stylesheet" href="/nav.css">
+</head>
+
+
+<body>
+  <nav class="menu">
+  <div class="menu-title">Chapters</div>
+  <ul class="menu-list">
+    
+    
+      <li>
+        <a href="/chapter-1/" class="is-active">
+          Chapter 1
+        </a>
+      </li>
+    
+      <li>
+        <a href="/chapter-2/" >
+          Chapter 2
+        </a>
+      </li>
+    
+      <li>
+        <a href="/chapter-3/" >
+          Chapter 3
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  <main class="content-area">
+    <section class="section card">
+  <div class="container">
+    <h1 class="title">Chapter 1</h1>
+    <div class="content">
+      <p><img src="../assets/bg.png" alt="chapter1" /></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+
+<p>Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Fireball</span>
+  <span class="nb">attr_reader</span> <span class="ss">:position</span><span class="p">,</span> <span class="ss">:velocity</span><span class="p">,</span> <span class="ss">:damage</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">origin</span><span class="p">:,</span> <span class="n">direction</span><span class="p">:,</span> <span class="n">speed</span><span class="p">:,</span> <span class="n">damage</span><span class="p">:)</span>
+    <span class="vi">@position</span> <span class="o">=</span> <span class="n">origin</span><span class="p">.</span><span class="nf">dup</span>
+    <span class="vi">@velocity</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="ss">x: </span><span class="n">direction</span><span class="p">[</span><span class="ss">:x</span><span class="p">]</span> <span class="o">*</span> <span class="n">speed</span><span class="p">,</span>
+      <span class="ss">y: </span><span class="n">direction</span><span class="p">[</span><span class="ss">:y</span><span class="p">]</span> <span class="o">*</span> <span class="n">speed</span><span class="p">,</span>
+      <span class="ss">z: </span><span class="n">direction</span><span class="p">[</span><span class="ss">:z</span><span class="p">]</span> <span class="o">*</span> <span class="n">speed</span>
+    <span class="p">}</span>
+    <span class="vi">@damage</span> <span class="o">=</span> <span class="n">damage</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">cast</span>
+    <span class="n">move</span>
+    <span class="n">apply_effect</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">move</span>
+    <span class="vi">@position</span><span class="p">[</span><span class="ss">:x</span><span class="p">]</span> <span class="o">+=</span> <span class="vi">@velocity</span><span class="p">[</span><span class="ss">:x</span><span class="p">]</span>
+    <span class="vi">@position</span><span class="p">[</span><span class="ss">:y</span><span class="p">]</span> <span class="o">+=</span> <span class="vi">@velocity</span><span class="p">[</span><span class="ss">:y</span><span class="p">]</span>
+    <span class="vi">@position</span><span class="p">[</span><span class="ss">:z</span><span class="p">]</span> <span class="o">+=</span> <span class="vi">@velocity</span><span class="p">[</span><span class="ss">:z</span><span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">apply_effect</span>
+    <span class="c1"># abstracted: engine handles collision, damage, cleanup</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">cast_fireball</span><span class="p">(</span><span class="n">origin</span><span class="p">:,</span> <span class="n">direction</span><span class="p">:,</span> <span class="ss">speed: </span><span class="mf">1.0</span><span class="p">,</span> <span class="ss">damage: </span><span class="mi">10</span><span class="p">)</span>
+  <span class="no">Fireball</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+    <span class="ss">origin: </span><span class="n">origin</span><span class="p">,</span>
+    <span class="ss">direction: </span><span class="n">direction</span><span class="p">,</span>
+    <span class="ss">speed: </span><span class="n">speed</span><span class="p">,</span>
+    <span class="ss">damage: </span><span class="n">damage</span>
+  <span class="p">).</span><span class="nf">cast</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.</p>
+
+<blockquote>
+  <p>Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.</p>
+</blockquote>
+
+    </div>
+  </div>
+
+  <div class="block chapter-nav">
+    
+
+    
+      <a class="button is-primary" href="/chapter-2/">Next Chapter</a>
+    
+  </div>
+
+  <div class="block">
+    <a class="button" href="/">Home</a>
+  </div>
+</section>
+
+  </main>
+</body>
+
+</html>

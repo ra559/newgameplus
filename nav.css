@@ -1,0 +1,64 @@
+/* styles.css */
+
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+}
+
+.content-area {
+  margin-left: 240px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+}
+
+.menu-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.menu-list li a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #111;
+  background: rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.menu-list li a:hover,
+.menu-list li a.is-active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+}
